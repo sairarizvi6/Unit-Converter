@@ -5,11 +5,11 @@ st.markdown("""
     <style>
     /* Dark Theme */
     body {
-        background-color: #121212;
+        background-color:rgba(20, 252, 221, 0.97);
         color: white;
     }
     .stApp {
-        background-color: #121212;
+        background-color:rgb(143, 243, 201);
     }
     .stReLeftbox, .stNumberInput, .stButton {
         border-radius: 8px;
@@ -37,7 +37,7 @@ st.markdown("""
     /* Result Styling */
     .result-text {
         font-weight: bold;
-        color: #E0AFFF;
+        color:rgb(249, 241, 253);
         font-size: 22px;
     }
     </style>
@@ -50,6 +50,7 @@ def convert_length(value, from_unit, to_unit):
         "Meters": 1000.0,
         "Miles": 0.621371,
         "Feet": 3280.84
+        
     }
     value_in_km = value / length_units[from_unit]
     return value_in_km * length_units[to_unit]
@@ -72,7 +73,7 @@ def convert_weight(value, from_unit, to_unit):
     return value_in_kg * weight_units[to_unit]
 
 # App Title
-st.markdown("<h1 style='text-align: center; color: white;'>⚡ Unit Converter⚡ </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>⚡ Unit Converter⚡ </h1>", unsafe_allow_html=True)
 
 # Row Layout for Select Conversion Type & Value Input
 col1, col2 = st.columns(2)
